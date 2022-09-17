@@ -1,0 +1,66 @@
+name: Request a new unit
+description: |
+  Contribute to the repository by requesting that a new unit gets added. 
+  You will then go on to add this unit yourself.
+labels:
+  - unit
+  - tutorial
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Welcome!**
+        
+        This template will guide you through submitting a new issue and how to write the code to resolve it.
+        First, we need a good, clear description of the issue you are raising. 
+        In this case, something like:
+        
+        The package should support newtons (n).
+        
+        We can also give a little more detail, 
+        which will help the repository maintainers decide how to prioritise the issue:
+        
+        Newtons are the SI unit of force, and are expressed as kilogram-meters per second squared.
+        A newton is the force required to accelerate a mass of one kilogram by one meter per second squared.
+        Implementing this new SI unit will mean that other contributors can add in other force units, 
+        including pounds-of-force (lbf).
+        
+        **Below, we have some checkboxes that are *required* for issues of this type.**
+        Not all repositories have these (or even issue templates), 
+        but they are included here to help guide you through the process
+        and give you an idea of what is expected behaviour on many mature repositories.
+
+  - type: textarea
+    attributes:
+      label: What article on docs.github.com is affected?
+      description: Please link to the article you'd like to see updated.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What part(s) of the article would you like to see updated?
+      description: |
+        - Give as much detail as you can to help us understand the change you want to see. 
+        - Why should the docs be changed? What use cases does it support? 
+        - What is the expected outcome?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contributing
+    attributes:
+      label: Contributor Guide
+      description: This project has a guide for contributors. First time contributors should read this.
+      options:
+        - label: I will comply with the [Contributor Guide](../../CONTRIBUTING.md)
+          required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: This project has a Code of Conduct that all participants are expected to understand and follow.
+      options:
+        - label: I have read and agree to the project's [Code of Conduct](../../CODE_OF_CONDUCT.md)
+          required: true
