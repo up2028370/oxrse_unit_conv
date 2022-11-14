@@ -32,18 +32,19 @@ body:
 
   - type: textarea
     attributes:
-      label: What article on docs.github.com is affected?
-      description: Please link to the article you'd like to see updated.
+      label: What is the name of the unit you want to create?
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: What part(s) of the article would you like to see updated?
-      description: |
-        - Give as much detail as you can to help us understand the change you want to see. 
-        - Why should the docs be changed? What use cases does it support? 
-        - What is the expected outcome?
+      label: Does it have an abbreviation?
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: What is its base SI unit?
     validations:
       required: true
 
