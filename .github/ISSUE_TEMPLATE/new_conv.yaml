@@ -30,19 +30,19 @@ body:
         but they are included here to help guide you through the process
         and give you an idea of what is expected behaviour on many mature repositories.
 
-  - type: textarea
+  - type: text
     attributes:
       label: What is the name of the unit you want to create?
     validations:
       required: true
 
-  - type: textarea
+  - type: text
     attributes:
       label: Does it have an abbreviation?
     validations:
       required: false
 
-  - type: textarea
+  - type: text
     attributes:
       label: What is its base SI unit?
     validations:
