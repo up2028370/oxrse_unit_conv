@@ -1,6 +1,7 @@
 name: Request a new unit
 description: |
   Contribute to the repository by requesting that a new unit gets added. 
+  
   You will then go on to add this unit yourself.
 labels:
   - unit
@@ -11,23 +12,16 @@ body:
       value: |
         **Welcome!**
         
-        This template will guide you through submitting a new issue and how to write the code to resolve it.
-        First, we need a good, clear description of the issue you are raising. 
-        In this case, something like:
+        This template will guide you through submitting a new issue and how to write the code to resolve it. First, we need a good, clear description of the issue you are raising. In this case, something like:
         
         The package should support sparkles (spk).
         
-        We can also give a little more detail, 
-        which will help the repository maintainers decide how to prioritise the issue:
+        We can also give a little more detail, which will help the repository maintainers decide how to prioritise the issue:
         
-        Sparkles are a made-up unit of illumination.
-        A sparkle is a common unit in the made-up field of illumoteknics, 
-        which is the study of the light produced by fireworks.
+        Sparkles are a made-up unit of illumination. A sparkle is a common unit in the made-up field of illumoteknics, which is the study of the light produced by fireworks.
         
         **Below, we have some checkboxes that are *required* for issues of this type.**
-        Not all repositories have these (or even issue templates), 
-        but they are included here to help guide you through the process
-        and give you an idea of what is expected behaviour on many mature repositories.
+        Not all repositories have these (or even issue templates), but they are included here to help guide you through the process and give you an idea of what is expected behaviour on many mature repositories.
 
   - type: input
     attributes:
