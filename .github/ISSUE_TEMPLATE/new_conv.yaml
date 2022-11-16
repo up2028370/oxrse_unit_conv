@@ -15,15 +15,14 @@ body:
         First, we need a good, clear description of the issue you are raising. 
         In this case, something like:
         
-        The package should support newtons (n).
+        The package should support sparkles (spk).
         
         We can also give a little more detail, 
         which will help the repository maintainers decide how to prioritise the issue:
         
-        Newtons are the SI unit of force, and are expressed as kilogram-meters per second squared.
-        A newton is the force required to accelerate a mass of one kilogram by one meter per second squared.
-        Implementing this new SI unit will mean that other contributors can add in other force units, 
-        including pounds-of-force (lbf).
+        Sparkles are a made-up unit of illumination.
+        A sparkle is a common unit in the made-up field of illumoteknics, 
+        which is the study of the light produced by fireworks.
         
         **Below, we have some checkboxes that are *required* for issues of this type.**
         Not all repositories have these (or even issue templates), 
@@ -32,21 +31,21 @@ body:
 
   - type: input
     attributes:
-      label: What is the name of the unit you want to create?
+      label: Name (Abbreviation) of the unit you want to create?
     validations:
       required: true
-
-  - type: input
-    attributes:
-      label: Does it have an abbreviation?
-    validations:
-      required: false
 
   - type: input
     attributes:
       label: What is its base SI unit?
     validations:
       required: true
+
+  - type: textarea
+    attributes:
+      label: Would you like to provide more information about your unit?
+    validations:
+      required: false
 
   - type: checkboxes
     id: contributing
