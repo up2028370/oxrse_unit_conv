@@ -1,0 +1,13 @@
+name: Unittest
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run tests
+      run: |
+        cd src/oxrse_unit_conv
+        python -m unittest discover  -s ../tests -t .. -v
