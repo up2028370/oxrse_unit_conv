@@ -1,5 +1,5 @@
 import unittest
-from ..units import lb, kg
+from oxrse_unit_conv.units import lb, kg
 
 
 class TestPound(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestPound(unittest.TestCase):
 
     def test_basic_conversion(self):
         self.assertEqual(lb.to_si(1), 0.4535924)
-        self.assertEqual(lb.to_unit(10, lb), 10)
+        self.assertAlmostEqual(lb.to_unit(10, lb), 10, 8)
 
 
 if __name__ == '__main__':

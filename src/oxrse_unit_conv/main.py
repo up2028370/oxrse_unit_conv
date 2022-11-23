@@ -9,7 +9,7 @@ logger = logging.getLogger(__file__)
 
 
 @click.command()
-@click.argument("number", type=meta.classes.Number)
+@click.argument("number", type=float)
 @click.argument("unit")
 @click.argument("to")
 def click_convert(number, unit, to):

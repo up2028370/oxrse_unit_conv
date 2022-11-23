@@ -5,7 +5,7 @@
 # the first unit is converted to the SI unit,
 # and then the SI unit is converted to the second unit.
 
-from .meta import classes
+from meta import classes
 
 second = classes.SIUnit("second", "s")
 s = second

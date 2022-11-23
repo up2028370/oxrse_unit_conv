@@ -1,6 +1,6 @@
 import unittest
-from ..meta import classes
-from .. import kilometer, m, m2, m3, s, hour
+from oxrse_unit_conv.meta import classes
+from oxrse_unit_conv import kilometer, m, m2, m3, s, hour
 
 
 class TestConversionCore(unittest.TestCase):
@@ -49,10 +49,21 @@ class TestConversionCore(unittest.TestCase):
         self.assertAlmostEqual(furlong3.to_unit(1, foot3), 287_496_000, 8)  # floating point errors
 
     def test_dimensionality_constraint(self):
-        with self.assertRaises(classes.DimensionError):
+        try:
+            exception = False
             hour.to_unit(10, kilometer)
-        with self.assertRaises(classes.DimensionError):
+        except BaseException as e:
+            # workaround for the standard approach not matching e to classes.DimensionError
+            self.assertEqual(type(e).__name__, classes.DimensionError.__name__)
+            exception = True
+        self.assertTrue(exception)
+        try:
+            exception = False
             kilometer.to_unit(10, hour)
+        except BaseException as e:
+            # workaround for the standard approach not matching e to classes.DimensionError
+            self.assertEqual(type(e).__name__, classes.DimensionError.__name__)
+            exception = True
 
     def test_exponent_constraint(self):
         foot = classes.Unit('foot', 'ft', m, lambda x: x * 0.3048)

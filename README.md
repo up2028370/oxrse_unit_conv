@@ -72,7 +72,7 @@ Tests are kept in the `__tests__` directory, and this should contain a different
 with the name `test_unit_UNITNAME.py`. 
 Our sparkle test file would be `test_unit_sparkle.py`.
 In this file we `import unittest`, as well as the relevant units from the package 
-`from ..units import sparkle, candela`.
+`from oxrse_unit_conv.units import sparkle, candela`.
 
 We should write a test or two converting known values. 
 Each test is declared as a method of the `unittest.TestCase` class, and has one or more `self.assert*()` calls
@@ -81,7 +81,7 @@ For sparkle, we may want to check that we can convert both ways:
 
 ```python
 import unittest
-from ..units import sparkle, candela
+from oxrse_unit_conv.units import sparkle, candela
 
 
 class TestSparkle(unittest.TestCase):
@@ -100,6 +100,11 @@ if __name__ == '__main__':
 ```
 
 If we had other luminosity units, we could add other methods to test that we can convert between those, too.
+
+Tests can be run by entering the `src/oxrse_unit_conv` directory and running the command:
+```shell
+python -m unittest discover  -s ../tests -t .. -v
+```
 
 ### Building package
 

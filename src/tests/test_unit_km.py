@@ -1,5 +1,5 @@
 import unittest
-from ..units import km, m
+from oxrse_unit_conv.units import km, m
 
 
 class TestKilometer(unittest.TestCase):
