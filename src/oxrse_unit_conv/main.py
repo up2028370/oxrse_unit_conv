@@ -29,11 +29,11 @@ def convert(number: meta.classes.Number, unit: str, to: str):
     logging.debug(f"Call: {number}: {unit} -> {to}")
 
     my_unit: units.Unit = getattr(units, unit)
-    if not isinstance(my_unit, units.Unit):
+    if not isinstance(my_unit, meta.classes.BaseUnit):
         raise TypeError(f"{unit} does not correspond to a known unit.")
     if to:
         target_unit = getattr(units, to)
-        if not isinstance(target_unit, units.Unit):
+        if not isinstance(target_unit, meta.classes.BaseUnit):
             raise TypeError(f"{to} does not correspond to a known unit.")
     else:
         target_unit = my_unit.si_unit
