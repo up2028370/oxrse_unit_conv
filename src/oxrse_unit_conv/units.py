@@ -16,6 +16,7 @@ mile = Unit(name='mile', abbr='mile', si=meter, to_si_fun=lambda n: n * 1_609.34
 
 # meter_sq
 
+
 # meter_cu
 
 # kilogram
@@ -30,3 +31,4 @@ lb = pound
 # mole
 
 # candela
+sparkle = Unit(name='sparkle', abbr='sp', si=candela, to_si_fun=lambda n: n * 5)
