@@ -41,6 +41,21 @@ print(f"{n}{km.abbr} in {mile} = {km.to_unit(n, mile)}")
 
 ### CLI
 
+The converter can also be run as a command-line tool.
+Once it's been installed, it can be run in your terminal as:
+
+```bash
+oxrse-unit-conv 42 km mile
+```
+
+Help is available using:
+
+```bash
+oxrse-unit-conv --help
+```
+
+
+
 ## Development
 
 ### Structure

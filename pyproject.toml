@@ -13,10 +13,17 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  "click"
+]
+
+[project.scripts]
+oxrse-unit-conv = "oxrse_unit_conv.main:click_convert"
 
 [project.urls]
 "Homepage" = "https://github.com/OxfordRSE/oxrse_unit_conv"
 "Bug Tracker" = "https://github.com/OxfordRSE/oxrse_unit_conv/issues"
+
 
 [build-system]
 requires = ["hatchling"]
