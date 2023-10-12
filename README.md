@@ -33,11 +33,9 @@ Units are converted to one another by asking one unit to convert to the other.
 The `Unit.to_unit` function takes a number and a target `Unit`.
 
 ```python
-import oxrse_unit_conv
+from oxrse_unit_conv import km, mile
 
 n = 42
-km = oxrse_unit_conv.km
-mile = oxrse_unit_conv.mile
 print(f"{n}{km.abbr} in {mile} = {km.to_unit(n, mile)}")
 ```
 

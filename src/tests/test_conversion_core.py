@@ -1,6 +1,6 @@
 import unittest
 from oxrse_unit_conv.meta import classes
-from oxrse_unit_conv import kilometer, m, m2, m3, s, hour
+from oxrse_unit_conv.units import kilometer, m, m2, m3, s, hour
 
 
 class TestConversionCore(unittest.TestCase):
