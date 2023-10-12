@@ -1,6 +1,6 @@
 # Click interface to allow running from command line
-import units
-import meta.classes
+from oxrse_unit_conv import units
+from oxrse_unit_conv.meta import classes
 import click
 import logging
 
@@ -25,15 +25,15 @@ def click_convert(number, unit, to):
     click.echo(convert(number, unit, to))
 
 
-def convert(number: meta.classes.Number, unit: str, to: str):
+def convert(number: classes.Number, unit: str, to: str):
     logging.debug(f"Call: {number}: {unit} -> {to}")
 
     my_unit: units.Unit = getattr(units, unit)
-    if not isinstance(my_unit, meta.classes.BaseUnit):
+    if not isinstance(my_unit, classes.BaseUnit):
         raise TypeError(f"{unit} does not correspond to a known unit.")
     if to:
         target_unit = getattr(units, to)
-        if not isinstance(target_unit, meta.classes.BaseUnit):
+        if not isinstance(target_unit, classes.BaseUnit):
             raise TypeError(f"{to} does not correspond to a known unit.")
     else:
         target_unit = my_unit.si_unit

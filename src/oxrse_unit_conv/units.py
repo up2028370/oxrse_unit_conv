@@ -1,5 +1,5 @@
-from si import *
-from meta.classes import Unit
+from oxrse_unit_conv.si import *
+from oxrse_unit_conv.meta.classes import Unit
 
 # second
 minute = Unit(name='minute', abbr='min', si=second, to_si_fun=lambda n: n * 60)
